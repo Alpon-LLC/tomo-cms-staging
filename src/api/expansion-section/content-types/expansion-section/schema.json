@@ -1,0 +1,27 @@
+{
+  "kind": "singleType",
+  "collectionName": "expansion_sections",
+  "info": {
+    "singularName": "expansion-section",
+    "pluralName": "expansion-sections",
+    "displayName": "Expansion Section"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "blocks",
+      "required": true
+    },
+    "cities": {
+      "type": "blocks",
+      "required": true
+    },
+    "bodyText": {
+      "type": "blocks",
+      "required": true
+    }
+  }
+}

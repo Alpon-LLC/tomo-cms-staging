@@ -1,0 +1,24 @@
+{
+  "collectionName": "components_destination_section_2_destination_section_2s",
+  "info": {
+    "displayName": "Destination Section 2"
+  },
+  "options": {},
+  "attributes": {
+    "leftTitleParagraph": {
+      "type": "string",
+      "required": true
+    },
+    "leftBodyParagraph": {
+      "type": "text"
+    },
+    "rightTitleParagraph": {
+      "type": "string",
+      "required": true
+    },
+    "rightBodyParagraph": {
+      "type": "text"
+    }
+  },
+  "config": {}
+}

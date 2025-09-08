@@ -1,0 +1,31 @@
+{
+  "kind": "singleType",
+  "collectionName": "cabins",
+  "info": {
+    "singularName": "cabin",
+    "pluralName": "cabins",
+    "displayName": "Cabin"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "images": {
+      "type": "media",
+      "multiple": true,
+      "required": true,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "types": {
+      "type": "component",
+      "component": "cabin-type.cabin-type",
+      "repeatable": true
+    }
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "kind": "singleType",
+  "collectionName": "destinations",
+  "info": {
+    "singularName": "destination",
+    "pluralName": "destinations",
+    "displayName": "Destination"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "titleSection1": {
+      "type": "blocks",
+      "required": true
+    },
+    "section2": {
+      "type": "component",
+      "component": "destination-section-2.destination-section-2",
+      "repeatable": false,
+      "required": true
+    },
+    "imageUrlSection1": {
+      "type": "string",
+      "required": true
+    },
+    "imageUrlSection2": {
+      "type": "string",
+      "required": true
+    }
+  }
+}

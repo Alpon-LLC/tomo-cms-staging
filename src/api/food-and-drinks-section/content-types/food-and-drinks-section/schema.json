@@ -1,0 +1,25 @@
+{
+  "kind": "singleType",
+  "collectionName": "food_and_drinks_sections",
+  "info": {
+    "singularName": "food-and-drinks-section",
+    "pluralName": "food-and-drinks-sections",
+    "displayName": "Food and Drinks Section"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "images": {
+      "type": "media",
+      "multiple": true,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    }
+  }
+}

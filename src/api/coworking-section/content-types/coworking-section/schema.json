@@ -1,0 +1,25 @@
+{
+  "kind": "singleType",
+  "collectionName": "coworking_sections",
+  "info": {
+    "singularName": "coworking-section",
+    "pluralName": "coworking-sections",
+    "displayName": "Coworking Section"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "images": {
+      "type": "media",
+      "multiple": true,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    }
+  }
+}

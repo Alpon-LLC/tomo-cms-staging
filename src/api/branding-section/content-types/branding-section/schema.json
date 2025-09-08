@@ -1,0 +1,19 @@
+{
+  "kind": "singleType",
+  "collectionName": "branding_sections",
+  "info": {
+    "singularName": "branding-section",
+    "pluralName": "branding-sections",
+    "displayName": "Branding Section"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "headline": {
+      "type": "blocks",
+      "required": true
+    }
+  }
+}

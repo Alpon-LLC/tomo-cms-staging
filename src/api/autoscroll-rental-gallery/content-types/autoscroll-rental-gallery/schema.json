@@ -1,0 +1,29 @@
+{
+  "kind": "collectionType",
+  "collectionName": "autoscroll_rental_galleries",
+  "info": {
+    "singularName": "autoscroll-rental-gallery",
+    "pluralName": "autoscroll-rental-galleries",
+    "displayName": "Autoscroll Rental Gallery"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "text": {
+      "type": "string"
+    },
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    }
+  }
+}
