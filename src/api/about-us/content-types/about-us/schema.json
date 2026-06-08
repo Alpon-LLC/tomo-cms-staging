@@ -1,10 +1,10 @@
 {
   "kind": "singleType",
-  "collectionName": "site_globals",
+  "collectionName": "about_uses",
   "info": {
-    "singularName": "site-global",
-    "pluralName": "site-globals",
-    "displayName": "SiteGlobal"
+    "singularName": "about-us",
+    "pluralName": "about-uses",
+    "displayName": "AboutUs"
   },
   "options": {
     "draftAndPublish": true
@@ -15,48 +15,7 @@
     }
   },
   "attributes": {
-    "siteLogo": {
-      "type": "media",
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      },
-      "multiple": true,
-      "required": false,
-      "allowedTypes": [
-        "images",
-        "videos",
-        "audios"
-      ]
-    },
-    "footerLinks": {
-      "type": "component",
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      },
-      "component": "general.footer-column",
-      "repeatable": false
-    },
-    "footerAddress": {
-      "type": "text",
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      }
-    },
-    "footerContact": {
-      "type": "text",
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      }
-    },
-    "footerCopyrightText": {
+    "heroPrimaryTitle": {
       "type": "string",
       "pluginOptions": {
         "i18n": {
@@ -64,7 +23,31 @@
         }
       }
     },
-    "footerImage": {
+    "heroPrimaryBody": {
+      "type": "text",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "heroSecondaryTitle": {
+      "type": "string",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "heroSecondaryBody": {
+      "type": "text",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "heroImage": {
       "type": "media",
       "pluginOptions": {
         "i18n": {
@@ -79,17 +62,95 @@
         "audios"
       ]
     },
-    "socialLinks": {
+    "featureSections": {
+      "type": "dynamiczone",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "components": [
+        "general.icon-feature"
+      ]
+    },
+    "featureSideImage": {
+      "type": "media",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "videos"
+      ]
+    },
+    "careerSectionTitle": {
+      "type": "string",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "careerSectionText": {
+      "type": "text",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "careerContactEmail": {
+      "type": "email",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "careerSectionLabel": {
+      "type": "string",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "career_items": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::job-posting.job-posting"
+    },
+    "sustainabilitySectionTitle": {
+      "type": "string",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "sustainabilitySectionText": {
+      "type": "text",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "sustainabilityItems": {
       "type": "component",
       "pluginOptions": {
         "i18n": {
           "localized": true
         }
       },
-      "component": "general.social-link",
+      "component": "general.accordion-i-item",
       "repeatable": true
     },
-    "bookingUrl": {
+    "developmentSectionTitle": {
       "type": "string",
       "pluginOptions": {
         "i18n": {
@@ -97,25 +158,25 @@
         }
       }
     },
-    "shopUrl": {
-      "type": "string",
+    "developmentSectionText": {
+      "type": "text",
       "pluginOptions": {
         "i18n": {
           "localized": true
         }
       }
     },
-    "sideMenuLinks": {
+    "developmentItems": {
       "type": "component",
       "pluginOptions": {
         "i18n": {
           "localized": true
         }
       },
-      "component": "general.link",
+      "component": "general.accordion-i-item",
       "repeatable": true
     },
-    "sideMenuLocationLabel": {
+    "faqSectionTitle": {
       "type": "string",
       "pluginOptions": {
         "i18n": {
@@ -123,41 +184,10 @@
         }
       }
     },
-    "sideMenuCurrentLocation": {
-      "type": "string",
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      }
-    },
-    "sideMenuTagline": {
-      "type": "string",
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      }
-    },
-    "languageOptions": {
-      "type": "component",
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      },
-      "component": "general.language-option",
-      "repeatable": true
-    },
-    "sideMenuSocialLinks": {
-      "type": "component",
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      },
-      "component": "general.social-link",
-      "repeatable": true
+    "faq_items": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::faq-item.faq-item"
     }
   }
 }

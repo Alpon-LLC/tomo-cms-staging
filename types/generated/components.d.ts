@@ -25,6 +25,17 @@ export interface DestinationSection2DestinationSection2
   };
 }
 
+export interface GeneralAccordionIItem extends Struct.ComponentSchema {
+  collectionName: 'components_general_accordion_i_items';
+  info: {
+    displayName: 'AccordionIItem';
+  };
+  attributes: {
+    content: Schema.Attribute.RichText;
+    title: Schema.Attribute.String;
+  };
+}
+
 export interface GeneralFooterColumn extends Struct.ComponentSchema {
   collectionName: 'components_general_footer_columns';
   info: {
@@ -32,6 +43,18 @@ export interface GeneralFooterColumn extends Struct.ComponentSchema {
   };
   attributes: {
     links: Schema.Attribute.Component<'general.link', true>;
+  };
+}
+
+export interface GeneralIconFeature extends Struct.ComponentSchema {
+  collectionName: 'components_general_icon_features';
+  info: {
+    displayName: 'IconFeature';
+  };
+  attributes: {
+    description: Schema.Attribute.Text;
+    number: Schema.Attribute.Integer;
+    title: Schema.Attribute.String;
   };
 }
 
@@ -87,7 +110,9 @@ declare module '@strapi/strapi' {
     export interface ComponentSchemas {
       'cabin-type.cabin-type': CabinTypeCabinType;
       'destination-section-2.destination-section-2': DestinationSection2DestinationSection2;
+      'general.accordion-i-item': GeneralAccordionIItem;
       'general.footer-column': GeneralFooterColumn;
+      'general.icon-feature': GeneralIconFeature;
       'general.language-option': GeneralLanguageOption;
       'general.link': GeneralLink;
       'general.map-hotspot': GeneralMapHotspot;
