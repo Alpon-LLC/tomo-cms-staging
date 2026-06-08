@@ -25,11 +25,73 @@ export interface DestinationSection2DestinationSection2
   };
 }
 
+export interface GeneralFooterColumn extends Struct.ComponentSchema {
+  collectionName: 'components_general_footer_columns';
+  info: {
+    displayName: 'FooterColumn';
+  };
+  attributes: {
+    links: Schema.Attribute.Component<'general.link', true>;
+  };
+}
+
+export interface GeneralLanguageOption extends Struct.ComponentSchema {
+  collectionName: 'components_general_language_options';
+  info: {
+    displayName: 'LanguageOption';
+  };
+  attributes: {
+    code: Schema.Attribute.String;
+    label: Schema.Attribute.String;
+  };
+}
+
+export interface GeneralLink extends Struct.ComponentSchema {
+  collectionName: 'components_general_links';
+  info: {
+    displayName: 'Link';
+  };
+  attributes: {
+    openInNewTab: Schema.Attribute.Boolean;
+    text: Schema.Attribute.String;
+    url: Schema.Attribute.String;
+  };
+}
+
+export interface GeneralMapHotspot extends Struct.ComponentSchema {
+  collectionName: 'components_general_map_hotspots';
+  info: {
+    displayName: 'MapHotspot';
+  };
+  attributes: {
+    category: Schema.Attribute.String;
+    description: Schema.Attribute.RichText;
+    label: Schema.Attribute.String;
+    number: Schema.Attribute.Integer;
+  };
+}
+
+export interface GeneralSocialLink extends Struct.ComponentSchema {
+  collectionName: 'components_general_social_links';
+  info: {
+    displayName: 'SocialLink';
+  };
+  attributes: {
+    platform: Schema.Attribute.String;
+    url: Schema.Attribute.String;
+  };
+}
+
 declare module '@strapi/strapi' {
   export module Public {
     export interface ComponentSchemas {
       'cabin-type.cabin-type': CabinTypeCabinType;
       'destination-section-2.destination-section-2': DestinationSection2DestinationSection2;
+      'general.footer-column': GeneralFooterColumn;
+      'general.language-option': GeneralLanguageOption;
+      'general.link': GeneralLink;
+      'general.map-hotspot': GeneralMapHotspot;
+      'general.social-link': GeneralSocialLink;
     }
   }
 }

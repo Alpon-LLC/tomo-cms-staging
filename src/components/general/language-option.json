@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_general_language_options",
+  "info": {
+    "displayName": "LanguageOption"
+  },
+  "options": {},
+  "attributes": {
+    "code": {
+      "type": "string"
+    },
+    "label": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}

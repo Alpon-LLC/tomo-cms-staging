@@ -1,0 +1,22 @@
+{
+  "collectionName": "components_general_map_hotspots",
+  "info": {
+    "displayName": "MapHotspot"
+  },
+  "options": {},
+  "attributes": {
+    "number": {
+      "type": "integer"
+    },
+    "label": {
+      "type": "string"
+    },
+    "category": {
+      "type": "string"
+    },
+    "description": {
+      "type": "richtext"
+    }
+  },
+  "config": {}
+}
