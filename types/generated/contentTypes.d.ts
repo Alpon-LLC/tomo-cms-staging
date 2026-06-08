@@ -454,15 +454,13 @@ export interface ApiAboutUsAboutUs extends Struct.SingleTypeSchema {
           localized: true;
         };
       }>;
-    featureSideImage: Schema.Attribute.Media<'images' | 'videos'> &
+    featureSideMedia: Schema.Attribute.Media<'images' | 'videos'> &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
           localized: true;
         };
       }>;
-    heroImage: Schema.Attribute.Media<
-      'images' | 'files' | 'videos' | 'audios'
-    > &
+    heroMedia: Schema.Attribute.Media<'images' | 'videos', true> &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
           localized: true;

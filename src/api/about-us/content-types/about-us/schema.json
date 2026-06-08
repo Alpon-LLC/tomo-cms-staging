@@ -47,19 +47,17 @@
         }
       }
     },
-    "heroImage": {
+    "heroMedia": {
       "type": "media",
       "pluginOptions": {
         "i18n": {
           "localized": true
         }
       },
-      "multiple": false,
+      "multiple": true,
       "allowedTypes": [
         "images",
-        "files",
-        "videos",
-        "audios"
+        "videos"
       ]
     },
     "featureSections": {
@@ -73,7 +71,7 @@
         "general.icon-feature"
       ]
     },
-    "featureSideImage": {
+    "featureSideMedia": {
       "type": "media",
       "pluginOptions": {
         "i18n": {
