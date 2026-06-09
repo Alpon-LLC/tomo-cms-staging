@@ -389,16 +389,16 @@ export interface ApiAboutUsAboutUs extends Struct.SingleTypeSchema {
     };
   };
   attributes: {
-    career_items: Schema.Attribute.Relation<
-      'oneToMany',
-      'api::job-posting.job-posting'
-    >;
     careerContactEmail: Schema.Attribute.Email &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
           localized: true;
         };
       }>;
+    careerItems: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::job-posting.job-posting'
+    >;
     careerSectionLabel: Schema.Attribute.String &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
@@ -441,7 +441,7 @@ export interface ApiAboutUsAboutUs extends Struct.SingleTypeSchema {
           localized: true;
         };
       }>;
-    faq_items: Schema.Attribute.Relation<'oneToMany', 'api::faq-item.faq-item'>;
+    faqItems: Schema.Attribute.Relation<'oneToMany', 'api::faq-item.faq-item'>;
     faqSectionTitle: Schema.Attribute.String &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
@@ -1250,11 +1250,11 @@ export interface ApiHomePageHomePage extends Struct.SingleTypeSchema {
       'api::cabin-type.cabin-type'
     >;
     featuredFaqs: Schema.Attribute.Relation<
-      'oneToOne',
+      'oneToMany',
       'api::faq-item.faq-item'
     >;
     featuredProducts: Schema.Attribute.Relation<
-      'oneToOne',
+      'oneToMany',
       'api::product.product'
     >;
     heroBodyText: Schema.Attribute.Text &
@@ -1263,16 +1263,15 @@ export interface ApiHomePageHomePage extends Struct.SingleTypeSchema {
           localized: true;
         };
       }>;
-    heroImage: Schema.Attribute.Media<
-      'images' | 'files' | 'videos' | 'audios'
-    > &
+    heroMedia: Schema.Attribute.Media<'images' | 'videos' | 'audios', true> &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
           localized: true;
         };
       }>;
-    heroSideImage: Schema.Attribute.Media<
-      'images' | 'files' | 'videos' | 'audios'
+    heroSideMedia: Schema.Attribute.Media<
+      'images' | 'videos' | 'audios',
+      true
     > &
       Schema.Attribute.SetPluginOptions<{
         i18n: {

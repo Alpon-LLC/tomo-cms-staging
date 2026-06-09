@@ -31,32 +31,30 @@
         }
       }
     },
-    "heroImage": {
+    "heroMedia": {
       "type": "media",
       "pluginOptions": {
         "i18n": {
           "localized": true
         }
       },
-      "multiple": false,
+      "multiple": true,
       "allowedTypes": [
         "images",
-        "files",
         "videos",
         "audios"
       ]
     },
-    "heroSideImage": {
+    "heroSideMedia": {
       "type": "media",
       "pluginOptions": {
         "i18n": {
           "localized": true
         }
       },
-      "multiple": false,
+      "multiple": true,
       "allowedTypes": [
         "images",
-        "files",
         "videos",
         "audios"
       ]
@@ -202,7 +200,7 @@
     },
     "featuredFaqs": {
       "type": "relation",
-      "relation": "oneToOne",
+      "relation": "oneToMany",
       "target": "api::faq-item.faq-item"
     },
     "shopSectionTitle": {
@@ -239,7 +237,7 @@
     },
     "featuredProducts": {
       "type": "relation",
-      "relation": "oneToOne",
+      "relation": "oneToMany",
       "target": "api::product.product"
     }
   }
