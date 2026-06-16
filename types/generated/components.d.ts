@@ -81,6 +81,30 @@ export interface GeneralLink extends Struct.ComponentSchema {
   };
 }
 
+export interface GeneralLocactionItems extends Struct.ComponentSchema {
+  collectionName: 'components_general_locaction_items';
+  info: {
+    displayName: 'locactionItems';
+  };
+  attributes: {
+    isFeatured: Schema.Attribute.Boolean;
+    name: Schema.Attribute.String;
+    url: Schema.Attribute.String;
+  };
+}
+
+export interface GeneralLocationItems extends Struct.ComponentSchema {
+  collectionName: 'components_general_location_items';
+  info: {
+    displayName: 'locationItems';
+  };
+  attributes: {
+    isFeatured: Schema.Attribute.Boolean;
+    name: Schema.Attribute.String;
+    url: Schema.Attribute.String;
+  };
+}
+
 export interface GeneralMapHotspot extends Struct.ComponentSchema {
   collectionName: 'components_general_map_hotspots';
   info: {
@@ -115,6 +139,8 @@ declare module '@strapi/strapi' {
       'general.icon-feature': GeneralIconFeature;
       'general.language-option': GeneralLanguageOption;
       'general.link': GeneralLink;
+      'general.locaction-items': GeneralLocactionItems;
+      'general.location-items': GeneralLocationItems;
       'general.map-hotspot': GeneralMapHotspot;
       'general.social-link': GeneralSocialLink;
     }

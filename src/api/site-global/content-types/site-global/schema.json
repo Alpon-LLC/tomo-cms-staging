@@ -115,22 +115,6 @@
       "component": "general.link",
       "repeatable": true
     },
-    "sideMenuLocationLabel": {
-      "type": "string",
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      }
-    },
-    "sideMenuCurrentLocation": {
-      "type": "string",
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      }
-    },
     "sideMenuTagline": {
       "type": "string",
       "pluginOptions": {
@@ -157,6 +141,16 @@
         }
       },
       "component": "general.social-link",
+      "repeatable": true
+    },
+    "locationItems": {
+      "type": "component",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "component": "general.locaction-items",
       "repeatable": true
     }
   }

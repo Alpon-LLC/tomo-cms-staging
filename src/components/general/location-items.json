@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_general_location_items",
+  "info": {
+    "displayName": "locationItems"
+  },
+  "options": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "url": {
+      "type": "string"
+    },
+    "isFeatured": {
+      "type": "boolean"
+    }
+  },
+  "config": {}
+}

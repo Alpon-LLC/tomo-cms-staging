@@ -1550,6 +1550,12 @@ export interface ApiSiteGlobalSiteGlobal extends Struct.SingleTypeSchema {
       'oneToMany',
       'api::site-global.site-global'
     >;
+    locationItems: Schema.Attribute.Component<'general.locaction-items', true> &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
     publishedAt: Schema.Attribute.DateTime;
     shopUrl: Schema.Attribute.String &
       Schema.Attribute.SetPluginOptions<{
@@ -1557,19 +1563,7 @@ export interface ApiSiteGlobalSiteGlobal extends Struct.SingleTypeSchema {
           localized: true;
         };
       }>;
-    sideMenuCurrentLocation: Schema.Attribute.String &
-      Schema.Attribute.SetPluginOptions<{
-        i18n: {
-          localized: true;
-        };
-      }>;
     sideMenuLinks: Schema.Attribute.Component<'general.link', true> &
-      Schema.Attribute.SetPluginOptions<{
-        i18n: {
-          localized: true;
-        };
-      }>;
-    sideMenuLocationLabel: Schema.Attribute.String &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
           localized: true;
