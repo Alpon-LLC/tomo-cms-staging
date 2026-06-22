@@ -1051,6 +1051,74 @@ export interface ApiExpansionSectionExpansionSection
   };
 }
 
+export interface ApiExplorePageExplorePage extends Struct.SingleTypeSchema {
+  collectionName: 'explore_pages';
+  info: {
+    displayName: 'ExplorePage';
+    pluralName: 'explore-pages';
+    singularName: 'explore-page';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  pluginOptions: {
+    i18n: {
+      localized: true;
+    };
+  };
+  attributes: {
+    articles: Schema.Attribute.Relation<'oneToMany', 'api::article.article'>;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    locale: Schema.Attribute.String;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::explore-page.explore-page'
+    >;
+    mapImage: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'> &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    mapLocations: Schema.Attribute.Component<'general.map-hotspot', true> &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    mapSectionDescription: Schema.Attribute.Text &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    mapSectionTitle: Schema.Attribute.String &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    pageSubtitle: Schema.Attribute.String &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    pageTitle: Schema.Attribute.String &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    publishedAt: Schema.Attribute.DateTime;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
 export interface ApiFaqItemFaqItem extends Struct.CollectionTypeSchema {
   collectionName: 'faq_items';
   info: {
@@ -2254,6 +2322,7 @@ declare module '@strapi/strapi' {
       'api::coworking-section.coworking-section': ApiCoworkingSectionCoworkingSection;
       'api::destination.destination': ApiDestinationDestination;
       'api::expansion-section.expansion-section': ApiExpansionSectionExpansionSection;
+      'api::explore-page.explore-page': ApiExplorePageExplorePage;
       'api::faq-item.faq-item': ApiFaqItemFaqItem;
       'api::food-and-drinks-section.food-and-drinks-section': ApiFoodAndDrinksSectionFoodAndDrinksSection;
       'api::footer.footer': ApiFooterFooter;
