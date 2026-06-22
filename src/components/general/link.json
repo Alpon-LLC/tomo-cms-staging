@@ -13,6 +13,9 @@
     },
     "openInNewTab": {
       "type": "boolean"
+    },
+    "isVisible": {
+      "type": "boolean"
     }
   },
   "config": {}
