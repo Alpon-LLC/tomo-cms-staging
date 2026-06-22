@@ -71,7 +71,8 @@
         }
       },
       "components": [
-        "general.link"
+        "general.rich-text-block",
+        "general.image-gallery"
       ]
     }
   }
