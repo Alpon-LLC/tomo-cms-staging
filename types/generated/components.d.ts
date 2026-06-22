@@ -58,6 +58,20 @@ export interface GeneralIconFeature extends Struct.ComponentSchema {
   };
 }
 
+export interface GeneralImageGallery extends Struct.ComponentSchema {
+  collectionName: 'components_general_image_galleries';
+  info: {
+    displayName: 'ImageGallery';
+  };
+  attributes: {
+    caption: Schema.Attribute.String;
+    images: Schema.Attribute.Media<
+      'images' | 'files' | 'videos' | 'audios',
+      true
+    >;
+  };
+}
+
 export interface GeneralLanguageOption extends Struct.ComponentSchema {
   collectionName: 'components_general_language_options';
   info: {
@@ -118,6 +132,17 @@ export interface GeneralMapHotspot extends Struct.ComponentSchema {
   };
 }
 
+export interface GeneralRichTextBlock extends Struct.ComponentSchema {
+  collectionName: 'components_general_rich_text_blocks';
+  info: {
+    displayName: 'RichText';
+  };
+  attributes: {
+    body: Schema.Attribute.RichText;
+    heading: Schema.Attribute.String;
+  };
+}
+
 export interface GeneralSocialLink extends Struct.ComponentSchema {
   collectionName: 'components_general_social_links';
   info: {
@@ -137,11 +162,13 @@ declare module '@strapi/strapi' {
       'general.accordion-i-item': GeneralAccordionIItem;
       'general.footer-column': GeneralFooterColumn;
       'general.icon-feature': GeneralIconFeature;
+      'general.image-gallery': GeneralImageGallery;
       'general.language-option': GeneralLanguageOption;
       'general.link': GeneralLink;
       'general.locaction-items': GeneralLocactionItems;
       'general.location-items': GeneralLocationItems;
       'general.map-hotspot': GeneralMapHotspot;
+      'general.rich-text-block': GeneralRichTextBlock;
       'general.social-link': GeneralSocialLink;
     }
   }
