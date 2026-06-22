@@ -89,6 +89,7 @@ export interface GeneralLink extends Struct.ComponentSchema {
     displayName: 'Link';
   };
   attributes: {
+    isVisible: Schema.Attribute.Boolean;
     openInNewTab: Schema.Attribute.Boolean;
     text: Schema.Attribute.String;
     url: Schema.Attribute.String;
