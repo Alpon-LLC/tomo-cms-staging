@@ -74,6 +74,14 @@
         "general.rich-text-block",
         "general.image-gallery"
       ]
+    },
+    "category": {
+      "type": "string",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
     }
   }
 }

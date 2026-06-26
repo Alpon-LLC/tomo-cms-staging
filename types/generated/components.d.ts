@@ -128,6 +128,10 @@ export interface GeneralMapHotspot extends Struct.ComponentSchema {
   attributes: {
     category: Schema.Attribute.String;
     description: Schema.Attribute.RichText;
+    image: Schema.Attribute.Media<
+      'images' | 'files' | 'videos' | 'audios',
+      true
+    >;
     label: Schema.Attribute.String;
     number: Schema.Attribute.Integer;
   };

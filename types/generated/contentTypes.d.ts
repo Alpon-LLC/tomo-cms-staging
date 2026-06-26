@@ -613,6 +613,12 @@ export interface ApiArticleArticle extends Struct.CollectionTypeSchema {
     };
   };
   attributes: {
+    category: Schema.Attribute.String &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
     contentBlocks: Schema.Attribute.DynamicZone<
       ['general.rich-text-block', 'general.image-gallery']
     > &
