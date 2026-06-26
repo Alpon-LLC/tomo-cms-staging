@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_general_locaction_items",
+  "info": {
+    "displayName": "locactionItems"
+  },
+  "options": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "url": {
+      "type": "string"
+    },
+    "isFeatured": {
+      "type": "boolean"
+    }
+  },
+  "config": {}
+}

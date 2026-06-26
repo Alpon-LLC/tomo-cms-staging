@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_general_icon_features",
+  "info": {
+    "displayName": "IconFeature"
+  },
+  "options": {},
+  "attributes": {
+    "number": {
+      "type": "integer"
+    },
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    }
+  },
+  "config": {}
+}
