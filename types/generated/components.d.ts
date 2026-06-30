@@ -126,6 +126,7 @@ export interface GeneralMapHotspot extends Struct.ComponentSchema {
     displayName: 'MapHotspot';
   };
   attributes: {
+    addressLink: Schema.Attribute.String;
     category: Schema.Attribute.String;
     description: Schema.Attribute.RichText;
     label: Schema.Attribute.String;

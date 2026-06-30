@@ -22,6 +22,9 @@
     },
     "yPercent": {
       "type": "decimal"
+    },
+    "addressLink": {
+      "type": "string"
     }
   },
   "config": {}
