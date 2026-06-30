@@ -17,15 +17,11 @@
     "description": {
       "type": "richtext"
     },
-    "image": {
-      "type": "media",
-      "multiple": true,
-      "allowedTypes": [
-        "images",
-        "files",
-        "videos",
-        "audios"
-      ]
+    "xPercent": {
+      "type": "decimal"
+    },
+    "yPercent": {
+      "type": "decimal"
     }
   },
   "config": {}
