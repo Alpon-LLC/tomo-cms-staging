@@ -89,7 +89,8 @@
         "i18n": {
           "localized": true
         }
-      }
+      },
+      "default": false
     }
   }
 }
