@@ -827,6 +827,12 @@ export interface ApiCabinTypeCabinType extends Struct.CollectionTypeSchema {
           localized: true;
         };
       }>;
+    number: Schema.Attribute.Integer &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
     publishedAt: Schema.Attribute.DateTime;
     slug: Schema.Attribute.UID<'name'> &
       Schema.Attribute.SetPluginOptions<{
